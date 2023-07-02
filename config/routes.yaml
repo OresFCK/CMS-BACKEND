@@ -3,3 +3,23 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+    
+add_gallery:
+  path: /api/gallery/add
+  controller: App\Controller\GalleryController::addGallery
+  methods: [POST]
+
+api_gallery_list:
+  path: /api/gallery
+  controller: App\Controller\GalleryController::getGalleryList
+  methods: GET
+
+api_add_news:
+    path: /api/add-news
+    methods: [POST]
+    controller: App\Controller\NewsController::addNews
+
+api_get_news:
+    path: /api/news
+    controller: App\Controller\NewsController::getNews
+    methods: [GET]
