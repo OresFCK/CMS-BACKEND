@@ -23,3 +23,22 @@ api_get_news:
     path: /api/news
     controller: App\Controller\NewsController::getNews
     methods: [GET]
+
+add_photo:
+    path: /api/photos/{galleryId}
+    controller: App\Controller\GalleryController::addPhoto
+    methods: POST
+
+api_get_photos:
+    path: /api/get_photos
+    controller: App\Controller\PhotoController::getPhotos
+    methods: [GET]
+
+gallery_photos_get:
+  path: /api/gallery/{id}/photos
+  controller: App\Controller\GalleryController::getGalleryPhotos
+  methods: GET
+
+gallery_photos:
+    path: /gallery/{id}
+    controller: App\Controller\GalleryController::getGalleryPhotos
